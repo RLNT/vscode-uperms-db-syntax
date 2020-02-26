@@ -49,7 +49,7 @@ To activate the syntax highlighting, your file needs to have the file extension 
   - the permission node of the plugin
   - turns red on mistakes
   - support placeholders (orange)
-  - support wildcards (pink)
+  - support wildcards (rose)
 - white
   - description of the permission
 - blue
@@ -58,8 +58,9 @@ To activate the syntax highlighting, your file needs to have the file extension 
   - separated with commas (red)
     - turns purple on mistakes
   - support arguments (orange)
-- red
+- pink
   - separators
+- red
   - error color
 
 ## **Known Issues**
