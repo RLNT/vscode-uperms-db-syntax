@@ -1,0 +1,85 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "UltraPermissions DB",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#block"
+        },
+        {
+            "include": "#error"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.updb",
+                    "match": "#.*"
+                }
+            ]
+        },
+        "block": {
+            "patterns": [
+                {
+                    "match": "^([^+]+[^+ ])(\\+)([^+ ]+)(\\+)([^+ ][^+]*)((\\+)([^+]+?))?$",
+                    "captures": {
+                        "1": { "name": "string.updb" },
+                        "2": { "name": "keyword.updb" },
+                        "3": {
+                            "name": "entity.name.function.updb",
+                            "patterns": [
+                                {
+                                    "name": "support.other.namespace.updb",
+                                    "match": "\\*"
+                                },
+                                {
+                                    "name": "meta.function-call.twig.updb",
+                                    "match": "\\[.*?\\]"
+                                },
+                                {
+                                    "name": "punctuation.definition.bold.markdown.updb",
+                                    "match": "\\[[^\\]]*"
+                                }
+                            ]
+                        },
+                        "4": { "name": "keyword.updb" },
+                        "5": { "name": "x.updb" },
+                        "6": {
+                            "name": "punctuation.definition.bold.markdown.updb",
+                            "patterns": [
+                                {
+                                    "match": "([,+]+)(\\/{1,2}[^,\\/\\[<\\n+]+)([<\\[][^\\n,/\\+]*[\\]>])*",
+                                    "captures": {
+                                        "1": {
+                                            "name": "keyword.updb",
+                                            "patterns": [
+                                                {
+                                                    "name": "token.debug-token",
+                                                    "match": ",,"
+                                                }
+                                            ]
+                                        },
+                                        "2": { "name": "support.constant.updb" },
+                                        "3": { "name": "meta.function-call.twig.updb" }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "error": {
+            "patterns": [
+                {
+                    "name": "punctuation.definition.bold.markdown.updb",
+                    "match": ".*"
+                }
+            ]
+        }
+    },
+    "scopeName": "database.updb"
+}

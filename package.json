@@ -1,0 +1,49 @@
+{
+    "name": "uperms-db-syntax",
+    "displayName": "Ultra Permissions DB Syntax",
+    "description": "Adds syntax highlighting for the Ultra Permissions database.",
+    "version": "1.0.0",
+    "publisher": "RLNT",
+    "author": {
+        "name": "RLNT"
+    },
+    "categories": [ "Programming Languages" ],
+    "icon": "images/icon.png",
+    "keywords": [ "ultra permissions", "syntax highlighting", "permission database", "uperms" ],
+    "markdown": "github",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RLNT/vscode-uperms-db-syntax.git"
+    },
+    "bugs": {
+        "url": "https://github.com/RLNT/vscode-uperms-db-syntax/issues",
+        "email": "damnrelentless.yt@gmail.com"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "updb",
+                "aliases": [
+                    "UltraPermissions DB",
+                    "UltraPermissions-DB",
+                    "uperms db",
+                    "upermsdb",
+                    "uperms-db",
+                    "updb"
+                ],
+                "extensions": [ ".updb" ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "updb",
+                "scopeName": "database.updb",
+                "path": "./syntaxes/updb.tmLanguage.json"
+            }
+        ]
+    }
+}
