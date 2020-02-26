@@ -51,7 +51,7 @@
                             "name": "punctuation.definition.bold.markdown.updb",
                             "patterns": [
                                 {
-                                    "match": "([,+]+)(\\/{1,2}[^,\\/\\[<\\n+]+)([<\\[][^\\n,/\\+]*[\\]>])*",
+                                    "match": "([,+]+)(\\/{1,2}[^,\\/\\n+ ][^,\\/\\n+]*)",
                                     "captures": {
                                         "1": {
                                             "name": "keyword.updb",
@@ -62,8 +62,23 @@
                                                 }
                                             ]
                                         },
-                                        "2": { "name": "support.constant.updb" },
-                                        "3": { "name": "meta.function-call.twig.updb" }
+                                        "2": {
+                                            "name": "support.constant.updb",
+                                            "patterns": [
+                                                {
+                                                    "name": "meta.function-call.twig.updb",
+                                                    "match": "([<\\[][^\\n,/\\+]*?[\\]>])"
+                                                },
+                                                {
+                                                    "name": "punctuation.definition.bold.markdown.updb",
+                                                    "match": "\\[[^\\]]*"
+                                                },
+                                                {
+                                                    "name": "punctuation.definition.bold.markdown.updb",
+                                                    "match": "<[^>]*"
+                                                }
+                                            ]
+                                        }
                                     }
                                 }
                             ]
