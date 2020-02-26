@@ -51,7 +51,7 @@
                             "name": "punctuation.definition.bold.markdown.updb",
                             "patterns": [
                                 {
-                                    "match": "([,+]+)(\\/{1,2}[^,\\/\\[<\\n+]+)([<\\[][^\\n,/\\+]*[\\]>])*",
+                                    "match": "([,+]+)(\\/{1,2}[^,\\/\\n+ ][^,\\/\\n+]*)",
                                     "captures": {
                                         "1": {
                                             "name": "keyword.updb",
