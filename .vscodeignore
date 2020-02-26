@@ -1,0 +1,6 @@
+# Directories
+.github/
+.vscode/
+
+# Files
+.gitignore
