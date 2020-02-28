@@ -11,6 +11,12 @@ The format is based on [Keep a Changelog][Keep a Changelog] and this project adh
 
 ## **[Released]**
 
+## [1.2.0] - 2020-02-28
+
+### Added
+- error tracking for empty description
+
+
 ## [1.1.0] - 2020-02-26
 
 ### Added
@@ -30,5 +36,6 @@ The format is based on [Keep a Changelog][Keep a Changelog] and this project adh
 <!-- Versions -->
 [Unreleased]: https://github.com/RLNT/vscode-uperms-db-syntax/compare/v1.0.0...HEAD
 [Released]: https://github.com/RLNT/vscode-uperms-db-syntax/releases
+[1.2.0]: https://github.com/RLNT/vscode-uperms-db-syntax/compare/v1.1.0..v1.2.0
 [1.1.0]: https://github.com/RLNT/vscode-uperms-db-syntax/compare/v1.0.0..v1.1.0
 [1.0.0]: https://github.com/RLNT/vscode-uperms-db-syntax/releases/tag/v1.0.0
